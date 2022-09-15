@@ -1,0 +1,199 @@
+*{
+    margin: 0; /* retira todas as margens */
+    padding: 0; /* retira os preenchimentos internos das caixas */
+    box-sizing: border-box; /* toda caixa no HTML sofre alterações de acordo com o padding. A opção border-box garante que o max-width seja sempre considerado */  
+
+}
+
+ul {
+    list-style: none; /* remove a exibição gráfica de pontos dos itens das listas */
+}
+
+body { 
+    background-image: url(./assets/bg.jpg); /*em body, identifica-se a imagem que será usada como background.
+     "url" trata-se de uma função, e ela necessita de um argumento. 
+     Nesse caso, trata-se a localização da imagem a ser utilizada como background */
+    background-position: top center; /* posiciona o bg em uma posição ao topo da página e centralizada */
+    background-size: 100% auto; /* o tamanho aumenta e diminui de acordo com o tamanho da janela, ou seja, 100% de seu tamnho proporcional */
+    background-repeat: no-repeat; /* impede a repetição da imagem na página */
+    background-color: #121214; /* seleciona a cor (pelo seu código hexadecimal) que será exibida abaixo da imagem, preenchendo o restante da página e dando a impressão visual de continuidade */
+
+} 
+
+body * { 
+    font-family: 'Inter', sans-serif; /*transforma as fontes contidas nos elementos de "body" em 'Inter'. O uso do "*" faz com que TUDO contido naquele conjunto seja alterado! */
+    line-height: 160%;
+}
+
+/*
+main * { 
+    border: 1px solid red; cria uma borda de cor vermelha e 1px para todo o elemento main exibido 
+}
+*/
+
+header{
+    margin-top: 32px; /*poderia ser utilizado o comando padding-top: 32px; também!*/
+    /*text-align: center; entralizará todo o conteúdo com propriedades de texto. A imagem é considerada texto nesse caso. Como há a aplicação no margin: auto no comando abaixo, este comando de texto faz-se desnecessário*/
+    height: 120px; /*a altura pré-definida do header faz com que a animação ocorra de forma mais fluida, pois a página já será carregada considerando o espaço de 120px reservado para a imagem!
+    P.S.: caso houvesse sido utilizado o comando padding-top: 32px ao invés do margin-top, seria necessário considerar +32px acima e abaixo da imagem. Isso acontece pois enquanto o 'padding' 
+    adiciona um espaço 'dentro' do elemento, o margin adiciona um espaço 'fora dele'. se vc colocar uma borda no elemento vai ver como funciona*/
+}
+
+
+header div{  /*o text-align não funcionará para este comando, pois o <div> não possui propriedades de texto. Assim, faz-se necessário buscar o comando margin: auto; */
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+    border-radius: 70%;
+    display: flex; /*neste caso, o comando flex fará com que todos os elementos dentro da <div> recebam certas propriedades (não necessariamente ficar um ao lado do outro). Como há apenas um elemento neste caso, ele ficará perfeitamente certralizado com o uso do comando. */
+    padding: 4px; /*cria um preenchimento da caixa, no caso, a borda*/
+
+    transition: transform .3s; /*O comando fará com que essa alteração de tamanho seja mais suave e dinâmica. Quando o cursor estiver sobre o elemento ativando o "transform", o transition fará com que a imagem aumente de forma dinâmica no intervalo de 3ms*/
+}
+
+header div:hover{
+    transform: scale(1.1) /*faz com que o elemento SUBITAMENTE mude sua escala quando o curso passar por cima dele. O comando abaixo fará com que essa alteração de tamanho seja mais suave e dinâmica*/
+
+}
+
+header div img {
+    width: 100%; /*a largura será de 100% em relação à dimensão especificada em header div{}*/
+    border-radius: 50%;
+    }
+
+
+
+
+
+main {
+    max-width: 580px; /* redimensiona toda a exibição contida na tag "main" */
+    width: 90%; /* para quando a tela for menor do que 580px, a exibição ocupará 90% da largura da tela */
+    margin: 32px auto; /* faz um posicionamento automático para centralizar o elemento main na janela. O valor especificado pode ser entedido como: quando houver dois valores, o primeiro é identificado como "em cima" o segundo como "embaixo". Caso haja apenas um valor, ambos espaçamentos serão da mesma dimensão.*/
+    
+    display: flex;
+    flex-direction: column; /* mesma noção da aplicação de layout BLOCK e INLINE utilizado no <li>. O display flex coloca os elementos na mesma linha, e o "flex-direction" os posiciona em coluna, com um gap de 24px. Também é possível usar o display grid.*/
+    gap: 24px;
+
+    
+}
+
+section {
+    color: white;
+    
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+
+
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px; /* o comando padding é utilizado para centralizar os textos. O padding altera o texto em todos os lados, enquanto o padding-top o texto mais acima.*/
+    
+    /*border-top: 4px solid red colore o topo do background, mas permite apenas uma cor*/
+}
+
+section h2 { /*o uso de section h2 direciona para que todos os elementos de cabeçalho heading tamanho 2 sofram as alterações descritas */
+    /*font-weight: 900; 
+    font-size: 24px;*/
+    letter-spacing: -0.47px;
+ /*vale lembrar que, certas vezes, o navegador pode possuir uma configuração de fontes semelhantes às quais se deseja exibir. Nesses casos, faz-se desnecessário aplicar essas alterações no código, uma vez que elas não serão perceptíveis caso estejam ausentes */
+}
+
+section p {
+    /*font-weight: 400;
+    font-size: 16px;*/
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+
+}
+
+section ul {
+    display: flex; /*O "ul", assim como outras tags, são consideradas BLOCOS, ou seja, ocupam todo o espaço naquela linha em
+    específico.  A tag "<li>" é um bloco, mas a tag "<a>" não, então todos elementos dentro da mesma tag <li> ocuparão a mesma linha. No
+    css, considerando o "ul" como uma caixa maior e o "li" como caixas menores DENTRO da caixa maior, é possível fazer uma configuração geral de display 
+    sem modificar o HTML*/ 
+    
+    flex-wrap: wrap;
+    gap: 16px /* funciona apenas apóx aplicação do display flex. Cria um espaçamento de 16px entra as imagens na mesma linha*/
+    
+}
+
+section ul li{
+    transition: transform .3s; /*aplicação da transição novamente!!*/
+}
+
+section ul li:hover{
+    transform: scale(1.1)
+}
+
+section ul{
+    margin-top: 24px; /* cria um espaçamento (gap) de 24 pixels da caixa acima */
+}
+
+.game-list img {
+    border-radius: 8px; /*altera para borda circular todas as imagens contidas no <li> identificado pela class=games-list*/
+    width: 90px;
+}
+
+.channel-list img {
+    border-radius: 50%; /*altera para borda circular todas as imagens contidas no <li> identificado pela class=games-list*/
+    width: 70px;
+    
+    border: 1px solid #443e54 /*cria uma borda para os elementos dessa classe*/
+}
+
+/*ANIMAÇÕES PARA A PÁGINA*/
+
+header div {
+    animation: fromTop .7s backwards; /*aqui, a animação criada é aplicada nos elementos do header div. Vale lembrar que essa aplicação poderia acontecer nas chaves abertas previamente no código, mas por uma questão de conveniência e não precisar ficar toda hora subindo no código,
+     as chaves e o header div foram copiados novamente. Não fará diferença. A propriedade backwards acrescentada fará com que a animação aconteça ANTES, evitando a animação inadequada em que o elemento aparecerá de forma esquisita e só depois a animação acontecerá! */
+    animation-delay: .4s; /*o delay da animação pode também ser acrescentado na linha da cima: animation: fromTop .7s 1s; */
+}
+
+main section {
+    animation: fromRight .4s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: .8s;
+}
+
+main section:nth-child(2){
+    animation-delay: 1s;
+}
+
+main section:nth-child(3){
+    animation-delay: 1.2s;
+}
+
+/*a função abaixo servirá para criar e especificar as propriedades da animação que será aplicada aos elementos da página. A animação em questão fará com que, quando a página for carregada, os elementos surjam de cima para baixo, como se caíssem lentamente*/
+@keyframes fromTop { /*fromTop é o nome dado por mim à animação*/
+    from{
+        opacity: 0;
+        transform: translateY(-30px) /*este comando fará com que o ponto de partida da imagem, quando a página for carregada, seja no ponto em que a coordenada Y seja de -30px*/
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0) /*o ponto 0 da coordenada Y indica o ponto em que a imagem deverá parar, ou seja, indica o ponto onde ela está posicionada por padrão*/
+    }
+
+}
+
+@keyframes fromRight { /*fromRight é o nome dado por mim à animação*/
+    from{
+        opacity: 0;
+        transform: translateX(30px) /*este comando fará com que o ponto de partida da imagem, quando a página for carregada, seja no ponto em que a coordenada X seja de 30px*/
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0) /*o ponto 0 da coordenada Y indica o ponto em que a imagem deverá parar, ou seja, indica o ponto onde ela está posicionada por padrão*/
+    }
+
+}
