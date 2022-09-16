@@ -6,7 +6,7 @@
 
 Projeto construído no evento Next Level Week da Rocketseat.
 
-[Clique aqui para acessar o projeto](https://victoralva08.github.io/nlw-esports-explorer/)
+🔗 [Clique aqui para acessar o projeto](https://victoralva08.github.io/nlw-esports-explorer/)
 
 ## 🔧 Tecnologias
 
