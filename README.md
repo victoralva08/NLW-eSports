@@ -2,19 +2,19 @@
 
 ![preview](./.github/preview.png)
 
->Trilha Explorer
+>Explorer Path
 
-Projeto construído no evento Next Level Week da Rocketseat.
+Project developed on the Rockeseat's Next Level Week event.
 
-🔗 [Clique aqui para acessar o projeto](https://victoralva08.github.io/nlw-esports-explorer/)
+🔗 [Click here to access the website project](https://victoralva08.github.io/nlw-esports-explorer/)
 
-## 🔧 Tecnologias
+## 🔧 Technologies
 
 - HTML
 - CSS 
 - Git e Github
 
-## 📞 Contato
+## 📞 Contact
 
 - victor.falva08@gmail.com
 
