@@ -12,7 +12,7 @@ Project developed on the Rockeseat's Next Level Week event.
 
 - HTML
 - CSS 
-- Git e Github
+- Git & Github
 
 ## 📞 Contact
 
